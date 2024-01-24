@@ -4,7 +4,7 @@ import classes from './post-header.module.css';
 
 function PostHeader({ title, image }) {
   return (
-    <header>
+    <header className={classes.header}>
       <h1>{title}</h1>
       <Image
         src={image}
