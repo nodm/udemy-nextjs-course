@@ -4,7 +4,7 @@ import classes from './main-navigation.module.css';
 
 function MainNavigation() {
   return (
-    <header>
+    <header className={classes.header}>
       <Link href="/">
         <Logo />
       </Link>
