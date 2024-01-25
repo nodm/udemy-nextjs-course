@@ -9,7 +9,7 @@ const contactSchema = Joi.object({
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.status(400).json({ message: 'Only POST method is implemented' });
+    res.status(405).json({ message: 'Method Not Allowed' });
     return;
   }
 
