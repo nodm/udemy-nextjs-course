@@ -16,9 +16,9 @@ async function handler(req, res) {
   const { value: newMessage, error } = contactSchema.validate(req.body, { abortEarly: false });
 
   if (error) {
-    const message = error.details
+    const details = error.details
       .reduce((errors, detail) => ({ ...errors, [detail.path]: detail.message }), {});
-    res.status(422).json({ message });
+    res.status(422).json({ message: 'Invalid input', details });
     return;
   }
 
