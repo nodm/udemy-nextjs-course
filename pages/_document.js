@@ -8,6 +8,7 @@ class BlogDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <div id="notification" />
         </body>
       </Html>
     );
